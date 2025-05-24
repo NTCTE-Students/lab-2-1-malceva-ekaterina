@@ -26,7 +26,6 @@ class PostController extends Controller
         Post::create($request->all());
         return redirect()->route('posts.index');
     }
-
     public function show($id) {
         $post = Post::find($id);
         return view('posts.show', compact('post'));
